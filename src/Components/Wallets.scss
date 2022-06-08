@@ -1,0 +1,146 @@
+// WALLETS
+.wallets {
+  width: 100%;
+  margin: 0 0 0 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .title {
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #262626;
+  }
+  .wallets-item {
+    width: 448px;
+    height: 70px;
+
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin: 0 0 20px -33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    .wallet-currancy {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+
+      .pre-dot {
+        display: none;
+        position: absolute;
+        left: -42px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #ee4874;
+      }
+      .dot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 100%;
+        color: #fff;
+        margin-right: 13px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .eur {
+        background-color: #42507f;
+      }
+      .gbp {
+        background-color: #e7bfb0;
+      }
+      .usd {
+        background-color: #f5855c;
+      }
+      .kmw {
+        background-color: #ffac30;
+      }
+    }
+    &:hover {
+      margin-left: -8px;
+      background: linear-gradient(180deg, #fd3a6c 0%, #f5855c 100%);
+      box-shadow: 0px 0px 7px #ee4874;
+      border-radius: 20px;
+      cursor: pointer;
+      .wallet-currancy {
+        .dot {
+          background-color: #fff;
+          color: #ee4874;
+        }
+        .pre-dot {
+          display: flex;
+        }
+      }
+    }
+    .wallet-amount {
+      margin-right: 17px;
+    }
+  }
+  .footer {
+    position: relative;
+    width: 537px;
+    height: 226px;
+    margin-left: -33px;
+
+    border-top: 1px solid #958a8a;
+    border-radius: 40px 0px 0px 0px;
+
+    .footer-list {
+      padding-left: 33px;
+      margin-top: 46px;
+      .footer-item {
+        display: flex;
+        flex-direction: row;
+        .arrow {
+          position: absolute;
+          width: 7px;
+          height: 13px;
+          right: 56px;
+          align-items: center;
+        }
+        .footer-info {
+          display: flex;
+          flex-direction: column;
+          padding: 0 0 40px 19px;
+          .text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+
+            color: #262626;
+          }
+          .subtext {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #797979;
+          }
+        }
+      }
+
+      .card {
+        width: 35px;
+        height: 25px;
+      }
+      .pension {
+        width: 32px;
+        height: 31px;
+      }
+    }
+  }
+}

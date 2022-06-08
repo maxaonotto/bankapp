@@ -1,0 +1,94 @@
+.navbar {
+  padding-top: 112px;
+  padding-bottom: 26px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #958a8a;
+}
+.profile {
+  margin-left: 26px;
+  display: flex;
+  align-items: center;
+  .img {
+    width: 24px;
+    height: 24px;
+  }
+  .text {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 41px;
+
+    color: #262626;
+  }
+}
+.navbar-item {
+  margin-bottom: 36px;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  &:hover {
+    visibility: visible;
+    cursor: pointer;
+    .navbar-button {
+      text-decoration: none;
+      margin-left: 8px;
+      .text {
+        color: #fd3a6c;
+      }
+      .home {
+        background-image: url("../photo/Icons/home-active.png");
+      }
+      .mms {
+        background-image: url("../photo/Icons/mms-active.svg");
+      }
+      .pig {
+        background-image: url("../photo/Icons/pig-active.svg");
+      }
+      .wallet {
+        background-image: url("../photo/Icons/wallet-active.svg");
+      }
+    }
+  }
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #fd3a6c;
+  }
+  .navbar-button {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    .navbar-img {
+      width: 14px;
+      height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .home {
+      background-image: url(".././photo/Icons/home.png");
+    }
+    .mms {
+      background-image: url("../photo/Icons/mms.svg");
+    }
+    .pig {
+      background-image: url("../photo/Icons/pig.svg");
+    }
+    .wallet {
+      background-image: url("../photo/Icons/wallet.svg");
+    }
+    .text {
+      margin-left: 5px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: #262626;
+    }
+  }
+}
