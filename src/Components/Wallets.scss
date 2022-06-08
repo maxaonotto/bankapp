@@ -13,6 +13,25 @@
     line-height: 30px;
 
     color: #262626;
+    .announcement {
+      display: flex;
+      align-items: center;
+
+      .announce-card {
+        margin-left: 10px;
+        width: 15.59px;
+        height: 12.25px;
+      }
+      .announce {
+        margin-left: 10px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        color: #262626;
+      }
+    }
   }
   .wallets-item {
     width: 448px;

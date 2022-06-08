@@ -19,7 +19,7 @@ const Balance = ({ walletCount }) => {
         <section className="header">
           <section className="header-item">
             <span className="text">Balance</span>
-            <span className="amount">{walletCount}</span>
+            <span className="amount">{walletCount.money}</span>
           </section>
           <section className="button">
             <img src={coinpig} className="img" alt="pig" />
@@ -30,7 +30,7 @@ const Balance = ({ walletCount }) => {
       <section className="transactions">
         <span className="text">Quick Transaction</span>
         <section className="donate">
-          <Link to={"/send"}>
+          <Link to={"/send"} style={{ textDecoration: "none" }}>
             <section className="send">
               <img src={mms} alt="mms" className="icon" />
               <span className="text">Send Money</span>

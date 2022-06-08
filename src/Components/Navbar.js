@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import foto from "../photo/Profiles/Ellipse 14.png";
 import "./Navbar.scss";
-const Navbar = () => {
+const Navbar = ({ sendMoney }) => {
   return (
-    <section className="navbar">
+    <section
+      className={
+        sendMoney?.type === "sendMoney" ? "navnar-send-money" : "navbar"
+      }
+    >
       <section>
         <ul>
           <li className="navbar-item">
@@ -16,7 +20,7 @@ const Navbar = () => {
           </li>
           <li className="navbar-item">
             <span className="dot"></span>
-            <Link to={"/send"}>
+            <Link to={"/send"} style={{ textDecoration: "none" }}>
               <section className="navbar-button">
                 <span className="navbar-img mms" />
                 <span className="text">Send Money</span>
@@ -41,7 +45,9 @@ const Navbar = () => {
       </section>
       <section className="profile">
         <img className="img" alt="foto" src={foto} />
-        <span className="text">Profile</span>
+        <span className="text">
+          {sendMoney?.type === "sendMoney" ? "Settings" : "Profile"}
+        </span>
       </section>
     </section>
   );

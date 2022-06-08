@@ -1,4 +1,5 @@
-.navbar {
+.navbar,
+.navnar-send-money {
   padding-top: 112px;
   padding-bottom: 26px;
   width: 100%;
@@ -91,4 +92,7 @@
       color: #262626;
     }
   }
+}
+.navnar-send-money {
+  width: 50%;
 }
