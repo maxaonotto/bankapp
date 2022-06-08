@@ -26,7 +26,8 @@
     color: #262626;
   }
 }
-.navbar-item {
+.navbar-item,
+.navbar-item-active {
   margin-bottom: 36px;
   visibility: hidden;
   display: flex;
@@ -34,7 +35,8 @@
   &:hover {
     visibility: visible;
     cursor: pointer;
-    .navbar-button {
+    .navbar-button,
+    .navbar-buttom-active {
       text-decoration: none;
       margin-left: 8px;
       .text {
@@ -90,6 +92,30 @@
       line-height: 24px;
 
       color: #262626;
+    }
+  }
+}
+.navbar-item-active {
+  visibility: visible;
+  cursor: pointer;
+  .navbar-button,
+  .navbar-buttom-active {
+    text-decoration: none;
+    margin-left: 8px;
+    .text {
+      color: #fd3a6c;
+    }
+    .home {
+      background-image: url("../photo/Icons/home-active.png");
+    }
+    .mms {
+      background-image: url("../photo/Icons/mms-active.svg");
+    }
+    .pig {
+      background-image: url("../photo/Icons/pig-active.svg");
+    }
+    .wallet {
+      background-image: url("../photo/Icons/wallet-active.svg");
     }
   }
 }

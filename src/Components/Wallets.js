@@ -28,22 +28,22 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
             className="wallets-item"
             onClick={() => changeWallet("€" + walletCount?.EUR, "EUR", "Euro")}
           >
-            <span className="wallet-currancy">
+            <section className="wallet-currancy">
               <span className="pre-dot"></span>
               <span className="dot eur">€</span>Euro (EUR)
-            </span>
+            </section>
             <span className="wallet-amount">{"€" + walletCount?.EUR}</span>
           </li>
           <li
             className="wallets-item"
             onClick={() =>
-              changeWallet("£" + walletCount?.GBP, "GBP", "British Sterlings")
+              changeWallet("£" + walletCount?.GBP, "GBP", "British Sterling")
             }
           >
-            <span className="wallet-currancy">
+            <section className="wallet-currancy">
               <span className="pre-dot"></span>
-              <span className="dot gbp">£</span>British Sterlings (GBP)
-            </span>
+              <span className="dot gbp">£</span>British Sterling (GBP)
+            </section>
             <span className="wallet-amount">{"£" + walletCount?.GBP}</span>
           </li>
           <li
@@ -52,10 +52,10 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
               changeWallet("$" + walletCount?.USD, "USD", "US Dollar")
             }
           >
-            <span className="wallet-currancy">
+            <section className="wallet-currancy">
               <span className="pre-dot"></span>
               <span className="dot usd">$</span>US Dollar (USD)
-            </span>
+            </section>
             <span className="wallet-amount">{"$" + walletCount?.USD}</span>
           </li>
           <li
@@ -64,10 +64,10 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
               changeWallet("₩" + walletCount?.KWR, "KWR", "South Korea Won")
             }
           >
-            <span className="wallet-currancy">
+            <section className="wallet-currancy">
               <span className="pre-dot"></span>
               <span className="dot kmw">₩</span>South Korea Won (KRW)
-            </span>
+            </section>
             <span className="wallet-amount">{"₩" + walletCount?.KWR}</span>
           </li>
         </ul>
@@ -75,28 +75,26 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
       {sendMoney?.type === "sendMoney" ? (
         <></>
       ) : (
-        <footer>
-          <section className="footer">
-            <section className="footer-list">
-              <section className="footer-item">
-                <img className="card" alt="card" src={card} />
-                <section className="footer-info">
-                  <span className="text">Request a Card</span>
-                  <span className="subtext">Get a debit card for free</span>
-                </section>
-                <img src={arrow} className="arrow" alt="arr" />
+        <section className="footer">
+          <section className="footer-list">
+            <section className="footer-item">
+              <img className="card" alt="card" src={card} />
+              <section className="footer-info">
+                <span className="text">Request a Card</span>
+                <span className="subtext">Get a debit card for free</span>
               </section>
-              <section className="footer-item">
-                <img className="pension" alt="free" src={pension} />
-                <section className="footer-info">
-                  <span className="text">Earn £25 for free</span>
-                  <span className="subtext">Apply for pension</span>
-                </section>
-                <img src={arrow} className="arrow" alt="arr" />
+              <img src={arrow} className="arrow" alt="arr" />
+            </section>
+            <section className="footer-item">
+              <img className="pension" alt="free" src={pension} />
+              <section className="footer-info">
+                <span className="text">Earn £25 for free</span>
+                <span className="subtext">Apply for pension</span>
               </section>
+              <img src={arrow} className="arrow" alt="arr" />
             </section>
           </section>
-        </footer>
+        </section>
       )}
     </section>
   );

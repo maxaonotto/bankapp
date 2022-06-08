@@ -11,6 +11,7 @@ const SendPage = ({ walletCount }) => {
         sendMoney={sendMoney}
         setSendMoney={setSendMoney}
         walletCount={walletCount}
+        pageName="Send"
       />
       <Wallets
         sendMoney={sendMoney}

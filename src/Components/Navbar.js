@@ -1,8 +1,8 @@
-import React from "react";
+import { React } from "react";
 import { Link } from "react-router-dom";
 import foto from "../photo/Profiles/Ellipse 14.png";
 import "./Navbar.scss";
-const Navbar = ({ sendMoney }) => {
+const Navbar = ({ sendMoney, pageName = "Home" }) => {
   return (
     <section
       className={
@@ -11,14 +11,24 @@ const Navbar = ({ sendMoney }) => {
     >
       <section>
         <ul>
-          <li className="navbar-item">
+          <li
+            className={
+              pageName === "Home" ? "navbar-item-active" : "navbar-item"
+            }
+          >
             <span className="dot"></span>
-            <section className="navbar-button">
-              <span className="navbar-img home" />
-              <span className="text">Home</span>
-            </section>
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <section className="navbar-button">
+                <span className="navbar-img home" />
+                <span className="text">Home</span>
+              </section>
+            </Link>
           </li>
-          <li className="navbar-item">
+          <li
+            className={
+              pageName === "Send" ? "navbar-item-active" : "navbar-item"
+            }
+          >
             <span className="dot"></span>
             <Link to={"/send"} style={{ textDecoration: "none" }}>
               <section className="navbar-button">

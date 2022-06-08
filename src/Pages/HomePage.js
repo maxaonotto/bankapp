@@ -20,7 +20,7 @@ const HomePage = ({ setWalletCount, walletCount }) => {
   }, []);
   return (
     <section className="container">
-      <Navbar />
+      <Navbar pageName="Home" />
       <Wallets setWalletCount={setWalletCount} walletCount={walletCount} />
       <Balance walletCount={walletCount} />
     </section>
