@@ -61,7 +61,8 @@ const Balance = ({ walletCount }) => {
               <span className="text">Currancy</span>
             </section>
             <section className="value">
-              Euro <span className="amount">&nbsp;EUR</span>
+              {walletCount.curr}
+              <span className="amount">&nbsp;{walletCount.typeof}</span>
             </section>
           </section>
         </section>

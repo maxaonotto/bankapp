@@ -6,8 +6,8 @@ import debit from "../photo/card-active.png";
 import "./Wallets.scss";
 
 const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
-  function changeWallet(value) {
-    setWalletCount({ ...walletCount, money: value });
+  function changeWallet(value, type, curr) {
+    setWalletCount({ ...walletCount, money: value, typeof: type, curr });
   }
 
   return (
@@ -26,7 +26,7 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
         <ul className="ul">
           <li
             className="wallets-item"
-            onClick={() => changeWallet("€" + walletCount?.EUR)}
+            onClick={() => changeWallet("€" + walletCount?.EUR, "EUR", "Euro")}
           >
             <span className="wallet-currancy">
               <span className="pre-dot"></span>
@@ -36,7 +36,9 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
           </li>
           <li
             className="wallets-item"
-            onClick={() => changeWallet("£" + walletCount?.GBP)}
+            onClick={() =>
+              changeWallet("£" + walletCount?.GBP, "GBP", "British Sterlings")
+            }
           >
             <span className="wallet-currancy">
               <span className="pre-dot"></span>
@@ -46,7 +48,9 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
           </li>
           <li
             className="wallets-item"
-            onClick={() => changeWallet("$" + walletCount?.USD)}
+            onClick={() =>
+              changeWallet("$" + walletCount?.USD, "USD", "US Dollar")
+            }
           >
             <span className="wallet-currancy">
               <span className="pre-dot"></span>
@@ -56,7 +60,9 @@ const Wallets = ({ setWalletCount, sendMoney, walletCount }) => {
           </li>
           <li
             className="wallets-item"
-            onClick={() => changeWallet("₩" + walletCount?.KWR)}
+            onClick={() =>
+              changeWallet("₩" + walletCount?.KWR, "KWR", "South Korea Won")
+            }
           >
             <span className="wallet-currancy">
               <span className="pre-dot"></span>

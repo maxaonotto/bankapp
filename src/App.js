@@ -10,6 +10,8 @@ function App() {
     USD: "10234.20",
     KWR: "0.00",
     money: "0.00",
+    typeof: "",
+    curr: "",
   });
   return (
     <BrowserRouter>
